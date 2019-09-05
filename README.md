@@ -376,9 +376,13 @@ OAuth 提供第三方认证体系
 	})
 
 # 本地测试
--安装依赖
+- 安装依赖
+终端输入
+```
 npm install
--修改config.sample.js
+```
+- 修改config.sample.js 改名 config.js
+```
 client id client secret 在github setting development 里面获取!
 const GITHUB_OAUTH_URL = 'https://github.com/login/oauth/authorize'
 const SCOPE = 'user'
@@ -394,5 +398,9 @@ module.exports = {
         client_id
     }&scope=${SCOPE}`  
 }
--本地运行
+```
+- 本地运行demo
+终端运行
+```
 npm run dev
+```
