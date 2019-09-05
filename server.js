@@ -42,7 +42,7 @@ app.prepare().then( () => {
 	//配置处理github auth 登陆
 	auth(server)
 	api(server)
-	router.get('/api/user/info', async ctx => {
+	router.get('/api/user/info', async (ctx) => {
 		const user = ctx.session.userInfo
 		if(!user){
 			ctx.status = 401

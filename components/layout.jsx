@@ -64,7 +64,8 @@ function MyLayout ({ children, user, logout, router }) {
                     <div className="header-left">
                         <div className="Logo">
                             <Link href="/" >
-                                <MyIcon />
+                                {/* <MyIcon /> */}
+                                <Icon  type="github" style={githubIconStyle}></Icon>
                             </Link>
                         </div>
                         <div>
