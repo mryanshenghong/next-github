@@ -27,7 +27,7 @@ class RedisSessionStore {
         ttl 存储key和值 对应的时间删除(过期时间)
     */
     async set(sid, sess,ttl){
-        console.log('set session',sid)
+        // console.log('set session',sid)
         const id = getRedisSessionId(sid)
         if(typeof ttl === 'number'){
             ttl = Math.ceil(ttl/1000)
