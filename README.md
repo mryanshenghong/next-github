@@ -374,3 +374,25 @@ OAuth 提供第三方认证体系
 	    }&scope=${SCOPE}`,
 	  },
 	})
+
+# 本地测试
+-安装依赖
+npm install
+- 修改config.sample.js
+client id client secret 在github setting development 里面获取!
+const GITHUB_OAUTH_URL = 'https://github.com/login/oauth/authorize'
+const SCOPE = 'user'
+const client_id = '' //github client id
+module.exports = {
+    github:{
+        client_id,
+        client_secret:'', //github client secret
+        request_token_url:'https://github.com/login/oauth/access_token',    
+    },
+    GITHUB_OAUTH_URL,
+    OAUTH_URL: `${GITHUB_OAUTH_URL}?client_id=${
+        client_id
+    }&scope=${SCOPE}`  
+}
+- 本地运行
+npm run dev
