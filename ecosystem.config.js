@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: "next-project",
+      name: "next-github",
       script: "./server.js",
       instances: 1,
       log_file: "/mnt/volume2/pm2/logs/next_github.log",
